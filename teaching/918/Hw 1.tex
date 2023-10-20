@@ -1,0 +1,180 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%                                %%%%%%%%%%%
+%%%%%%%%%%% This is a template for quizzes %%%%%%%%%%%
+%%%%%%%%%%%                                %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt]{article}
+\usepackage{amssymb,amsmath,amsfonts,amsthm,graphicx}
+\DeclareGraphicsExtensions{.pdf}
+%\centerline {\includegraphics[width=3in]{PICTURE}}
+
+\usepackage{geometry}
+%\usepackage{fullpage}
+
+\newtheoremstyle{problem}{\topsep}{\topsep}%%% space between body and thm
+		{}                      %%% Thm body font
+		{}                              %%% Indent amount (empty = no indent)
+		{\bfseries}            %%% Thm head font
+		{}                    %%% Punctuation after thm head
+		{ }                           %%% Space after thm head
+		{\thmnumber{#2}\thmnote{ \bfseries (#3)}}%%% Thm head spec
+\theoremstyle{problem}
+\newtheorem{p}{}
+
+\textwidth6in
+\textheight8.5in
+
+\newcommand{\V}[1]{\mathbf{#1}}
+\renewcommand{\d}{\,{\mathrm d}}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+\newcommand{\lcm}{\mathop{\mathrm{lcm}}\nolimits}
+
+\renewcommand{\labelenumi}{($\mathrm{\alph{enumi}}$)}
+\newcommand{\pr}[1]{{{\bf P}^{#1}}}
+\newcommand{\Aff}[1]{{{\bf A}^{#1}}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\Shf}[1]{\mathcal{#1}}
+\newcommand{\field}{K}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\NN}{\mathbb{N}}
+
+\newcommand{\GB}{Gr\"obner basis }
+\newcommand{\PE}{\begin{proof}EXERCISE\end{proof}}
+\newcommand{\I}{{\bf I}}
+%\newcommand{\V}{{\bf V}}
+\newcommand{\bx}{{\bf x}}
+\newcommand{\md}{\rm{multideg}}
+\newcommand{\multideg}{\rm{multideg}}
+
+
+\newcommand{\M}{{\em Macaulay2 }}
+
+\begin{document}
+\markright{\Large\textup\textbf{Math 918 -- Computational Algebra}\hfill 
+%%%%%%%%%%% Quiz Name is Here %%%%%%%%%%%
+\Large\textup{\textbf{Homework 1}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{empty}
+
+\thispagestyle{myheadings}
+\pagenumbering{gobble}
+
+
+\noindent{\bf Due Friday, September 6, before 5 pm.}
+\bigskip 
+
+\noindent{\em Work in groups (of 1 or more). Each group should turn in ONE solution set, preferably by email in LaTeX format. Each group should solve at least $\max($\# of group members, 4) problems. Write down what group members contributed to which problems.}
+\bigskip 
+
+\noindent{\em AG=alg.~geom., CO=combinatorial, AP=applied, M2= computational, B=beginner, *=advanced.}
+\bigskip 
+
+\begin{p} [B -Polynomials in one variable]
+\begin{enumerate}
+\item Prove that every ideal of $\CC[x]$ is principal.
+\item Let $f\in \CC[x]$. Describe $V((f))$ and $I(V(f))$.
+\end{enumerate}
+\end{p}
+
+
+%\vfill
+
+\begin{p} [B -Properties of \md]
+Let $f,g\in R$ be nonzero polynomials. Prove that:
+\begin{enumerate}
+\item $\md(fg) = \md(f) + \md(g)$
+\item If $ f + g \neq 0$,then $\md(f + g) \leq \max(\md(f), \md(g))$; in addition, if $\md(f) \neq \md(g)$, then equality occurs.
+\item Suppose that $\multideg(f) = \multideg(g)$ and$f+g\neq0$. Give examples to show that
+$\multideg(f + g)$ may or may not equal $\max(\multideg(f), \multideg(g))$.
+\end{enumerate}
+\end{p}
+
+
+%\vfill
+
+
+
+
+ \begin{p} [AG]
+ Let $I=(y-x^2,z-x^3)\subset R=k[x,y,z]$ be the ideal of the affine twisted cubic.
+ \begin{enumerate}
+\item Compute a \GB of $I$. Is it minimal? Reduced?
+\item For every $f\in R$, show that $f\%I$ is a polynomial in $\RR[x]$
+\item Adapt the idea above to find $\I(V)$, where $V$ is parametrized by $(t,t^m,t^n)$, $m,n\geq 2$.
+\end{enumerate}
+\end{p}
+
+
+%\vfill
+
+
+ \begin{p} [B, CO - 2-dimensional monomial ideals]
+ Let $I = (x^6, x^2y^3, xy^7) \subset k[x, y]$.
+  \begin{enumerate}
+\item In the $(x,y)$-plane, plot the set of exponent vectors $(m,n)$ of monomials $x^my^n\in I$
+\item If $f\in k[x,y]$, use the picture in part (a) to explain what terms can appear in the remainder $f\%I$.
+\end{enumerate}
+\end{p}
+
+
+%\vfill
+
+
+
+\begin{p} [B -True or false?]
+If true, give a proof, otherwise give a counterexample.
+\begin{enumerate}
+\item If $G$ and $G'$ are two Gr\"obner bases of the same ideal $I$ with respect to the {\em same monomial order} then $f\%G=f\%G'$ for any polynomial $f$.
+\item $S(f,g)$ does not depend on the monomial order for any polynomials $f,g$.
+\item $(fg)\%G=((f\%G)(g\%G))\%G$ for any polynomials $f,g$ and any \GB $G$.
+\end{enumerate}
+\end{p}
+
+
+%\vfill
+
+\begin{p} [Minimal \GB]
+\begin{enumerate}
+\item Show that a \GB $G$ of $I$  is minimal if and only if $LC(g) =1$ for all $g\in G$ and
+$LT(G)$ is a minimal generating set  of the monomial ideal $LT(I)$.
+\item Conclude that two minimal Gr\"obner bases of the same ideal have the same number of elements.
+\end{enumerate}
+\end{p}
+
+
+%\vfill
+
+
+%\vfill
+
+\begin{p} [*]
+Suppose you travel to a country whose currency has four coins valued 20, 24, 25, and 31. What is the largest amount of money which cannot be expressed by these coins?
+\end{p}
+\noindent{\em Hint: knowing about Hilbert functions may help. It is ok to use \M for this problem. I am specifically requiring a  computational commutative algebra solution for this problem.  }
+
+%\vfill
+
+\begin{p} [*, M2]
+Find (experimentally) all the possible initial ideals with respect to all the possible monomial orders on $\CC[x,y,z]$ for $I$, where $I$ is the ideal of a set of 7 general points in $\pr{2}$ (use the code below to build this ideal).
+\end{p}
+\noindent{\em Hint: every monomial order is given by a weight vector ${\bf w}$. Can you reduce the possibilities to be considered for ${\bf w}$? Experiment with a large number of vectors to find several distinct $LT_{{\bf w}}(I)$. Explore the continuity of $LT_{{\bf w}}(I)$ as a function of ${\bf w}$. What seem to be the cut-off weights? I am not looking for a proof, just a well documented guess.
+
+The code computes the defining ideal of a set of 7 general points in $\pr{2}$ out of their coordinates (stored in the matrix M) and its initial ideal w.r.t. the weights 3,2,1. The ideal of the 7 points is stored in the variable G and the initial ideal is stored in the variable inG.  }
+
+\begin{verbatim}
+loadPackage "Points";
+M = random(ZZ^3, ZZ^7);
+R = QQ[x,y,z, Weights =>{3,2,1}];
+(Q,inG,G) = points(M,R);
+\end{verbatim}
+
+
+ \end{document}  
+
+ 
+ 
+
+ 
+ 

@@ -1,0 +1,221 @@
+/* to hide top-level nav (global), uncomment next line */
+#sacstate-nav-images { display: none; }
+body { 
+
+	margin: 0px 25px 0px 25px;
+	padding: 0px;	
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px; /* about 9pt */
+	
+}
+
+@media print { 
+
+	body {
+
+		margin: 0px 0px 0px 0px;
+		padding: 0px;	
+
+	}
+	
+}
+
+td, th {
+
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 12px;
+	
+}
+
+a {
+
+	color: #00573D;
+	text-decoration: underline;
+
+}
+
+#search {
+
+	margin: 0px;
+	padding: 0px;
+
+}
+
+#search label {
+
+	color: #00573D;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+#searchbox {
+
+	background-color: #C6D6CE;
+	border: 1px solid #00573D;
+	color: #00573D;
+	width: 105px;
+	min-height: 16px;
+	font-size: 10px;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+
+/* hide horizontal nav */
+.horiznav { display: none; } 
+
+
+.vertnavcell {
+
+	background-color: #EEE6CE;
+	border-right: 1px solid #666666;
+	
+	/* close to 160 at 1024x768 */
+	width: 15%; 
+
+}
+
+.vertnav {
+
+	margin: 0px;
+	padding: 5px;
+
+}
+
+.vertnav ul {
+	padding: 0px;
+	margin: 0px 0px 1em 0px;
+	list-style: none;
+}
+
+.vertnav li {
+	padding: 0px;
+	margin: .5em;
+}
+
+.vertnavheader {
+
+	color: #00573D;
+	font-weight: bold;
+
+}
+
+.vertnav a:link, .vertnav a:visited, .vertnav a:active {
+
+	color: #00573D;
+	text-decoration: none;
+
+}
+
+.vertnav a:hover {
+
+	color: #00573D;
+	text-decoration: underline;
+
+}
+
+
+.content {
+
+	margin: 0px 10px 5px 10px;
+	padding: 0px;
+	
+}
+
+.calloutboxborder {
+
+	border: 1px solid #EEE6CE;
+	margin: 10px 0px 10px 0px;
+	
+}
+
+.calloutboxheader {
+
+	background-color: #EEE6CE;
+	color: #00573D;
+	font-weight: bold;
+	margin: 0px;
+	padding: 5px;
+	
+}
+
+.calloutbox {
+
+	color: #00573D;
+	margin: 0px;
+	padding: 5px;
+	
+}
+
+#footer {
+
+	color: #00573D;
+	font-size: 10px;
+
+}
+
+#footercell {
+	background-repeat: no-repeat;
+}
+
+h1 {
+
+	font-size: 165%;
+	margin-top: 0px;
+	
+}
+
+h2 {
+
+	font-size: 150%;
+	
+}
+
+h3 {
+
+	font-size: 135%;
+	
+}
+
+h4 {
+
+	font-size: 120%;
+	
+}
+
+h5 {
+
+	font-size: 105%;
+	
+}
+
+h6 {
+
+	font-size: 100%;
+	
+}
+
+.darkgreen {
+
+	background-color: #00573D;
+	
+}
+
+.lightgreen {
+
+	background-color: #C6D6CE;
+	
+}
+
+.darkgreentext {
+
+	color: #00573D;
+	
+}
+
+.lightgreentext {
+
+	color: #C6D6CE;
+	
+}
